@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1300px 100px;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                'section section section'
+                'footer footer footer'
+            ;
+            background-color: whitesmoke;
+        }
+
+        header {
+            grid-area: header;
+            height: 100px;
+            background-color: rgb(246, 190, 121);
+        }
+
+        header .tk {
+            float: right;
+            margin-left: 190px;
+            display: flex;
+        }
+
+        header .tk a {
+            font-size: 16px;
+        }
+
+        .tk>.tk-right img {
+            position: absolute;
+            float: left;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        header a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(40, 35, 80);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: brown;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        header img {
+            float: left;
+            width: 190px;
+            height: 90px;
+        }
+
+        nav {
+            grid-area: nav;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.714);
+        }
+
+        nav ul {
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            text-decoration: none;
+            color: rgb(182, 205, 67);
+            font-variant: inherit;
+            font-size: 24px;
+            padding: 0 10px;
+            line-height: 2px;
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(245, 50, 50);
+        }
+        section {
+            grid-area: section;
+            height: 650px;
+        }
+
+        .fr-tt {
+            height: auto;
+            width: 700px;
+            margin-left: 100px;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .fr-tt label {
+            width: 120px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .fr-tt p {
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .fr-tt input[id] {
+            padding: 8px;
+            width: 700px;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 5px gray;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .fr-tt h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .fr-tt input[type="submit"] {
+            width: 140px;
+            height: 40px;
+            border: none;
+            background-color: salmon;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 35%;
+        }
+
+        .dh1 {
+            margin-top: 30px;
+            margin-left: 140px;
+            width: 400px;
+
+        }
+
+        .dh {
+            background-color: rgb(80, 76, 76);
+            padding: 20px;
+        }
+
+        .dh h4 {
+            font-size: 20px;
+            line-height: 23px;
+            font-weight: 700;
+            color: #cea679;
+        }
+
+        .dh h4 span {
+            float: right;
+            display: block;
+        }
+
+        .dh ul {
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .dh ul li {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .dh ul li span {
+            color: #ffffff;
+            float: right;
+        }
+
+        .dh p {
+            line-height: 30px;
+            font-weight: 600;
+            color: #ffffff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ffffff;
+            margin: 0;
+        }
+
+        .dh p span {
+            float: right;
+        }
+
+        footer {
+            grid-area: footer;
+            height: 200px;
+            background: rgb(160, 126, 86);
+        }
+
+        footer p {
+            color: rgba(55, 43, 1, 0.89);
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        footer #b {
+            width: 50%;
+            float: left;
+            margin: 5px 40px;
+        }
+
+        footer p {
+            color: rgba(67, 56, 44, 0.89);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40px;
+            font-size: 16px;
+            line-height: 5px;
+        }
+
+        footer a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(38, 90, 209);
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="media.html" style="float: left;"><img class="logo" src="img/logo1.png" alt="logo"></a>         
+            <input
+                style="height: 20px; width: 380px; margin-top: 40px; margin-left: 40px; font-size: 20px; float: left; border-radius: 5px; padding-left: 13px;"
+                type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <img src="img/ic2.png" style="width: 30px; height: 30px; margin-top: 37px; float: left;" alt="">
+            <div style="margin-top: 30px;margin-left: 70px; float: left;">
+                <a href="giohang.html" style="line-height: -12px; float: left; font-weight: bold;"><img src="img/ic_shoppingcart.png"
+                        style="width: 26px; height: 26px;" alt="">
+                    Giỏ Hàng
+                </a>
+            </div>
+            <div class="tk">               
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_dauhoi.png" style="width: 16px; height: 16px;"
+                    alt="" hspace="5px">
+                    Hỗ Trợ
+                </a>
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_chuongtb.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Thông Báo
+                </a>
+                <div class="tk-right">                    
+                    <a href="dangnhap.html">Đăng nhập </a>
+                    <a href=""><img src="img/icons8_user.png"alt=""></a>
+                </div>
+                <a href="a.html" target="a">Đăng ký</a>
+            </div>  
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Trang chủ </a></li>
+                <li><a href="tintuc.html"> Tin tức </a></li>
+                <li><a href="sanpham.html"> Sản phẩm </a></li>
+                <li><a href="gioithieu.html"> Giới thiệu </a></li>
+                <li><a href="table.html"> Liên hệ </a></li>
+            </ul>
+        </nav>
+        <section>
+            <div align="center">
+                <p style="color: rgb(172, 6, 34); font-size: 17px;"><a href="index.html"
+                        style="font-size: 18px; text-decoration: none;">HOME </a> > Thanh Toán</p>
+                <hr>
+            </div>
+            <div style="display: flex;">
+                <form class="fr-tt" action="" method="post">
+                    <h3>ĐỊA CHỈ THANH TOÁN</h3>
+                    <label>Họ Và Tên</label><br>
+                    <input type="text" name="ten" id=""><br>
+                    <label>Email</label><br>
+                    <input type="text" name="matkhau" id=""><br>
+                    <label>Địa Chỉ</label><br>
+                    <input type="text" name="matkhau" id=""><br>
+                    <label>Số Điện Thoại</label><br>
+                    <input type="text" name="ten" id=""><br>
+                    <input type="submit" value="Xác nhận">
+                </form>
+                <div class="dh1">
+                    <h2>Đơn Hàng </h2>
+                    <div class="dh">
+                        <h4>Sản Phẩm <span>Tổng Tiền</span></h4>
+                        <ul>
+                            <li>Suzuki Satria F150 x 01 <span>48.490.000 đ</span></li>
+                            <li>SH160I x 01<span>127.000.000 đ</span></li>
+                            <li>Exciter 150 x 01 <span>94.000.000 đ</span></li>
+                            <li>Vespa Sprint 125 x 01 <span>81.000.000 đ</span></li>
+                        </ul>
+
+                        <p>Tổng phụ<span>350.490.000 đ</span></p>
+                        <p>Shipping Fee <span>$00.00</span></p>
+
+                        <h4>Tổng <span>350.490.000 đ</span></h4>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <div id="b">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THÔNG TIN LIÊN HỆ</p>
+                <p>Lầu 20, tòa nhà Havana, số 132 Hàm Nghi, P. Bến Thành, Q.1, TP.HCM.</p>
+                <p>Giờ làm việc: Thứ 2 - 6: 8h00 - 17h00</p>
+                <p>Email: thuannmps34337@fpt.edu.vn</p>
+                <p>Đường dây nóng: 0979362735</p>
+
+            </div>
+            <div style="float: right; margin-right: 400px; line-height: 10px;">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THEO DÕI CHÚNG TÔI TRÊN</p>
+                <a href="#"><img src="img/ic_yt.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_insta.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_fb.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+            </div>
+        </footer>
+
+</body>
+
+</html>

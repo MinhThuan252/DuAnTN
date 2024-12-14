@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1300px 100px;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                'section section section'
+                'footer footer footer'
+            ;
+            background-color: whitesmoke;
+        }
+
+        header {
+            grid-area: header;
+            height: 100px;
+            background-color: rgb(246, 190, 121);
+        }
+
+        header .tk {
+            float: right;
+            margin-left: 190px;
+            display: flex;
+        }
+
+        header .tk a {
+            font-size: 16px;
+        }
+
+        .tk>.tk-right img {
+            position: absolute;
+            float: left;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        header a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(40, 35, 80);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: brown;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        header img {
+            float: left;
+            width: 190px;
+            height: 90px;
+        }
+
+        nav {
+            grid-area: nav;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.714);
+        }
+
+        nav ul {
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            text-decoration: none;
+            color: rgb(182, 205, 67);
+            font-variant: inherit;
+            font-size: 24px;
+            padding: 0 10px;
+            line-height: 2px;
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(245, 50, 50);
+        }
+
+        section {
+            grid-area: section;
+            height: 1650px;
+        }
+
+        #b {
+            width: 60%;
+            float: left;
+            margin: 30px 150px;
+        }
+
+        #c {
+            margin: 80px 1100px;
+            text-align: left;
+            background-color: rgba(84, 83, 86, 0.51);
+            position: fixed;
+            width: 280px;
+            height: 200px;
+            z-index: 2;
+        }
+
+        #c a {
+            font-size: 15px;
+            text-decoration: none;
+            color: rgb(35, 36, 36);
+        }
+
+        aside {
+            margin: 30px 1100px;
+            text-align: left;
+            background-color: rgb(27, 26, 28);
+            position: fixed;
+            width: 280px;
+            height: 50px;
+            z-index: 2;
+        }
+
+        footer {
+            grid-area: footer;
+            height: 200px;
+            background: rgb(160, 126, 86);
+        }
+
+        footer p {
+            color: rgba(55, 43, 1, 0.89);
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        footer #b {
+            width: 50%;
+            float: left;
+            margin: 5px 40px;
+        }
+
+        footer p {
+            color: rgba(67, 56, 44, 0.89);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40px;
+            font-size: 16px;
+            line-height: 5px;
+        }
+
+        footer a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(38, 90, 209);
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="media.html" style="float: left;"><img class="logo" src="img/logo1.png" alt="logo"></a>
+            <input
+                style="height: 20px; width: 380px; margin-top: 40px; margin-left: 40px; font-size: 20px; float: left; border-radius: 5px; padding-left: 13px;"
+                type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <img src="img/ic2.png" style="width: 30px; height: 30px; margin-top: 37px; float: left;" alt="">
+            <div style="margin-top: 30px;margin-left: 70px; float: left;">
+                <a href="giohang.html" style="line-height: -12px; float: left; font-weight: bold;"><img
+                        src="img/ic_shoppingcart.png" style="width: 26px; height: 26px;" alt="">
+                    Giỏ Hàng
+                </a>
+            </div>
+            <div class="tk">
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_dauhoi.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Hỗ Trợ
+                </a>
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_chuongtb.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Thông Báo
+                </a>
+                <div class="tk-right">
+                    <a href="dangnhap.html">Đăng nhập </a>
+                    <a href=""><img src="img/icons8_user.png" alt=""></a>
+                </div>
+                <a href="a.html" target="a">Đăng ký</a>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Trang chủ </a></li>
+                <li><a href="tintuc.html"> Tin tức </a></li>
+                <li><a href="sanpham.html"> Sản phẩm </a></li>
+                <li><a href="gioithieu.html"> Giới thiệu </a></li>
+                <li><a href="table.html"> Liên hệ </a></li>
+            </ul>
+        </nav>
+        <section>
+            <div align="center">
+                <p style="color: rgb(172, 6, 34); font-size: 17px;"><a href="index.html"
+                        style="font-size: 18px; text-decoration: none;">HOME </a> > TIN TỨC</p>
+                <hr>
+            </div>
+            <div id="b">
+                <img src="img/tintuc1.jpg" style="width: 900px; height: 370px;" alt="">
+                <p style="font-weight: bold; font-size: 20px;">HONDA VIỆT NAM - RINH QUÀ ĐÓN XUÂN VỚI CHƯƠNG TRÌNH TRI
+                    ÂN KHÁCH HÀNG CUỐI NĂM “TÀI LỘC TỚI, PHƠI PHỚI TẾT HONDA”</p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(57, 55, 55, 0.988);">
+                    Hà Nội, ngày 01 tháng 12 năm 2021, Công ty Honda Việt Nam (HVN) thực hiện chương trình tri ân “Tài
+                    lộc tới, phơi phới Tết Honda” dành cho khách hàng mua các mẫu Wave Alpha 110cc, Blade 110cc, Vision
+                    110cc và Air Blade 125cc/150cc.</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">Không
+                    chỉ được đánh giá là một trong những nhà sản xuất ô tô xe máy hàng đầu, HVN còn là hãng xe được ghi
+                    nhận với nỗ lực không ngừng trong việc đưa khách hàng đến với trải nghiệm mua sắm cực ấn tượng qua
+                    những chương trình hấp dẫn. Qua từng năm, HVN luôn nỗ lực thay đổi và nâng cao hơn giá trị các phần
+                    quà để bày tỏ sự tri ân tới khách hàng. Vào ngày 01 tháng 12, HVN chính thức triển khai chương trình
+                    mang tên gọi “Tài lộc tới, phơi phới Tết Honda”.</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">Qua
+                    chương trình tri ân khách hàng vô cùng đặc biệt này, toàn bộ khách hàng mua các mẫu xe Wave Alpha
+                    110cc, Blade 110cc, Vision 110cc và Air Blade 125cc/150cc do HVN phân phối đều có cơ hội “ngập tràn”
+                    với nhiều phần quà, tận hưởng niềm vui mua sắm cực hấp dẫn. Chương trình là lời cám ơn HVN dành tới
+                    những khách hàng đã luôn tin tưởng đồng hành cùng các hoạt động và sản phẩm của Công ty trong suốt
+                    một năm qua. Bên cạnh sự tri ân, HVN còn mong muốn gửi lời chúc mừng năm mới và hy vọng khách hàng
+                    sẽ có một mùa mua sắm cuối năm với nhiều niềm vui và trải nghiệm mới.</p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(69, 61, 47, 0.988); text-decoration:underline;">
+                    Chi tiết chương trình tri ân “Tài lộc tới, phơi phới Tết Honda”</p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(95, 76, 56, 0.988);">
+                    1/Thời gian:
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">Từ
+                    ngày 01/12/2021 đến hết ngày 31/01/2022 (căn cứ theo ngày ghi trên Hóa đơn giá trị gia tăng xuất cho
+                    khách hàng tại các Cửa hàng Bán xe và Dịch vụ do Honda ủy nhiệm – HEAD và Cửa hàng bán xe máy tổng
+                    hợp).</p>
+                </p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(95, 76, 56, 0.988);">
+                    2/Đối tượng khách hàng và phạm vi áp dụng:
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">Tất
+                    cả các khách hàng mua các loại xe do HVN sản xuất: Wave Alpha 110cc, Blade 110cc, Vision 110cc và
+                    Air Blade 125cc/150cc tại HEAD và các Cửa hàng bán xe máy tổng hợp trên phạm vi toàn quốc.</p>
+                </p>
+                <img src="img/tintuc2.jpg" style="width: 650px; height: 350px; margin-left: 110px;" alt="">
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(95, 76, 56, 0.988);">
+                    3/Hình thức:
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">Khách
+                    hàng khi mua xe Wave Alpha 110cc, Blade 110cc, Vision 110cc và Air Blade 125cc/150cc trong thời gian
+                    diễn ra chương trình sẽ được tham gia quay thưởng ngay tại HEAD với nhiều phần quà hấp dẫn, đặc biệt
+                    là cơ hội mua xe trúng thêm 01 xe máy Wave Alpha. Cụ thể:</p>
+                </p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">§
+                    Giải đặc biệt: 20 khách hàng may mắn sẽ có cơ hội trúng mẫu xe số là phiên bản giới hạn Wave Alpha
+                    110cc được các cầu thủ Đội tuyển Bóng đá Quốc Gia Nam Việt Nam đặc biệt dành tặng chữ ký lên xe,
+                    khiến quà tặng trở nên độc đáo và ý nghĩa hơn bao giờ hết.</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">§
+                    Giải nhất: 2.000 khách hàng may mắn sẽ có cơ hội sở hữu thêm 01 xe máy Wave Alpha 110cc.</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">§
+                    Phần quà hấp dẫn cho những khách hàng không giành được hai Giải trên:</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">
+                    –Khách hàng mua xe Wave Alpha 110cc, Blade 110cc hoặc Vision 110cc: nhận được ngay lì xì trị giá
+                    500.000 VNĐ</p>
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; color: rgba(0, 0, 0, 0.792);">
+                    –Khách hàng mua xe Air Blade 125cc/150cc: nhận được ngay lì xì trị giá 1.000.000 VNĐ</p>
+            </div>
+            <P STY></P>
+            <aside>
+                <p style="color: aliceblue; font-weight:200; word-spacing: 2px; padding-left: 20px;">DANH MỤC TIN</p>
+            </aside>
+            <div id="c">
+                <p style="color: rgb(35, 36, 36); font-weight:200; word-spacing: 2px; padding-left: 20px;"><a
+                        href="">TIN MỚI NHẤT</a></p>
+                <hr>
+                <p style="color: rgb(35, 36, 36); font-weight:200; word-spacing: 2px; padding-left: 20px;"><a
+                        href="">KHUYẾN MÃI</a></p>
+                <hr>
+                <p style="color: rgb(35, 36, 36); font-weight:200; word-spacing: 2px; padding-left: 20px;"><a
+                        href="">TIN TỨC</a></p>
+                <hr>
+            </div>
+        </section>
+        <footer>
+            <div id="b">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THÔNG TIN LIÊN HỆ</p>
+                <p>Lầu 20, tòa nhà Havana, số 132 Hàm Nghi, P. Bến Thành, Q.1, TP.HCM.</p>
+                <p>Giờ làm việc: Thứ 2 - 6: 8h00 - 17h00</p>
+                <p>Email: thuannmps34337@fpt.edu.vn</p>
+                <p>Đường dây nóng: 0979362735</p>
+
+            </div>
+            <div style="float: right; margin-right: 400px; line-height: 10px;">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THEO DÕI CHÚNG TÔI TRÊN</p>
+                <a href="#"><img src="img/ic_yt.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_insta.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_fb.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+            </div>
+        </footer>
+
+</body>
+
+</html>

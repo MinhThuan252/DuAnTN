@@ -1,0 +1,252 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 1300px 100px;
+    grid-template-areas:
+        'header header header'
+        'nav nav nav'
+        'banner banner banner'
+        '. section .'
+        'footer footer footer'
+    ;
+    background-color: rgb(204, 202, 202);
+}
+
+header {
+    grid-area: header;
+    height: 100px;
+    background-color: rgb(246, 190, 121);
+}
+
+header .tk {
+    float: right;
+    margin-left: 190px;
+    display: flex;
+}
+
+header .tk a {
+    font-size: 16px;
+}
+
+.tk>.tk-right img {
+    position: absolute;
+    float: left;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+header a {
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 25px;
+    color: rgb(40, 35, 80);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: brown;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header img {
+    float: left;
+    width: 190px;
+    height: 90px;
+}
+
+nav {
+    grid-area: nav;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.714);
+}
+
+nav ul {
+    text-align: center;
+    margin-right: 50px;
+}
+
+nav>ul>li {
+    display: inline-block;
+    position: relative;
+}
+
+nav>ul>li>a {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 205, 67);
+    font-variant: inherit;
+    font-size: 24px;
+    padding: 0 10px;
+    line-height: 2px;
+}
+
+nav>ul>li>a:hover {
+    color: rgb(245, 50, 50);
+}
+.banner {
+    height: 500px;
+    background-image: url(img/banner1.jpg);
+    background-size: 100% 100%;
+    grid-area: banner;
+}
+section {
+    grid-area: section;
+    height: auto;
+}
+
+section>.spnb {
+    border: 4px solid #ab6161;
+    background-color: rgb(18, 20, 22);
+    justify-content: center;
+    height: 40px;
+    line-height: 2px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 260px;
+}
+section>.boxsp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+.sp {
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(233, 134, 91);
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.sp a {
+    text-decoration: none;
+    color: rgb(112, 70, 31);
+    display: block;
+}
+
+.sp img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.sp p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sp button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(231, 74, 74);
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sp button:hover {
+    color: rgb(191, 152, 152);
+    background-color: rgb(191, 16, 16);
+    transform: scale(1.1);
+}
+
+.boxsp1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.sp1 {
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(233, 134, 91);
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.sp1 a {
+    text-decoration: none;
+    color: rgb(112, 70, 31);
+    display: block;
+}
+
+.sp1 img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.sp1 p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sp1 button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(231, 74, 74);
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sp1 button:hover {
+    color: rgb(191, 152, 152);
+    background-color: rgb(191, 16, 16);
+    transform: scale(1.1);
+}
+.sale {
+
+    right: auto;
+  left: 10px;
+  color: #cea679;
+  border-color: #cea679;
+}
+
+footer {
+    grid-area: footer;
+    height: 200px;
+    background: rgb(160, 126, 86);
+}
+
+footer p {
+    color: rgb(49, 82, 86);
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+footer #b {
+    width: 50%;
+    float: left;
+    margin: 5px 40px;
+}
+
+footer p {
+    color: rgba(55, 43, 1, 0.89);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 5px;
+}
+
+footer a {
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 25px;
+    color: rgb(38, 90, 209);
+    line-height: 10px;
+}

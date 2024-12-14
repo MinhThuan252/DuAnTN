@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1300px 100px;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                'section section section'
+                'footer footer footer'
+            ;
+            background-color: whitesmoke;
+        }
+
+        header {
+            grid-area: header;
+            height: 100px;
+            background-color: rgb(246, 190, 121);
+        }
+
+        header .tk {
+            float: right;
+            margin-left: 190px;
+            display: flex;
+        }
+
+        header .tk a {
+            font-size: 16px;
+        }
+
+        .tk>.tk-right img {
+            position: absolute;
+            float: left;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        header a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(40, 35, 80);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: brown;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        header img {
+            float: left;
+            width: 190px;
+            height: 90px;
+        }
+
+        nav {
+            grid-area: nav;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.714);
+        }
+
+        nav ul {
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            text-decoration: none;
+            color: rgb(182, 205, 67);
+            font-variant: inherit;
+            font-size: 24px;
+            padding: 0 10px;
+            line-height: 2px;
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(245, 50, 50);
+        }
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        #b {
+            width: 50%;
+            float: left;
+            margin-left: 150px;
+            clear: both;
+            font-size: 20px;
+        }
+
+        #ophai {
+            float: right;
+            width: 35%;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+
+        #ophai a {
+            color: rgb(255, 255, 255);
+            background-color: rgb(231, 74, 74);
+            padding: 5px 10px;
+            font-size: 22px;
+            border: none;
+            border-radius: 5px;
+
+        }
+
+        #ophai a:hover {
+            color: rgb(191, 152, 152);
+            background-color: rgb(191, 16, 16);
+        }
+
+        #c {
+            margin: 80px 1100px;
+            text-align: left;
+            background-color: rgba(84, 83, 86, 0.51);
+            position: fixed;
+            width: 280px;
+            height: 200px;
+            z-index: 2;
+        }
+
+        #c a {
+            font-size: 15px;
+            text-decoration: none;
+            color: rgb(35, 36, 36);
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        #img {
+            text-decoration: none;
+            position: absolute;
+            right: 50px;
+            top: 40px;
+            font-size: 20px;
+            color: black;
+        }
+
+        footer {
+            grid-area: footer;
+            height: 200px;
+            background: rgb(160, 126, 86);
+        }
+
+        footer p {
+            color: rgba(55, 43, 1, 0.89);
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        footer #b {
+            width: 50%;
+            float: left;
+            margin: 5px 40px;
+        }
+
+        footer p {
+            color: rgba(67, 56, 44, 0.89);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40px;
+            font-size: 16px;
+            line-height: 5px;
+        }
+
+        footer a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(38, 90, 209);
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="media.html" style="float: left;"><img class="logo" src="img/logo1.png" alt="logo"></a>
+            <input
+                style="height: 20px; width: 380px; margin-top: 40px; margin-left: 40px; font-size: 20px; float: left; border-radius: 5px; padding-left: 13px;"
+                type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <img src="img/ic2.png" style="width: 30px; height: 30px; margin-top: 37px; float: left;" alt="">
+            <div style="margin-top: 30px;margin-left: 70px; float: left;">
+                <a href="giohang.html" style="line-height: -12px; float: left; font-weight: bold;"><img
+                        src="img/ic_shoppingcart.png" style="width: 26px; height: 26px;" alt="">
+                    Giỏ Hàng
+                </a>
+            </div>
+            <div class="tk">
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_dauhoi.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Hỗ Trợ
+                </a>
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_chuongtb.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Thông Báo
+                </a>
+                <div class="tk-right">
+                    <a href="dangnhap.html">Đăng nhập </a>
+                    <a href=""><img src="img/icons8_user.png" alt=""></a>
+                </div>
+                <a href="a.html" target="a">Đăng ký</a>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Trang chủ </a></li>
+                <li><a href="tintuc.html"> Tin tức </a></li>
+                <li><a href="sanpham.html"> Sản phẩm </a></li>
+                <li><a href="gioithieu.html"> Giới thiệu </a></li>
+                <li><a href="table.html"> Liên hệ </a></li>
+            </ul>
+        </nav>
+        <section>
+            <div align="center">
+                <p style="color: rgb(172, 6, 34); font-size: 17px;"><a href="index.html">HOME </a> > CHI TIẾT SẢN PHẨM
+                </p>
+                <hr>
+            </div>
+            <div align="center">
+                <p style="font-weight: bold; font-size: 30px;">Royal Enfield 650</p>
+            </div>
+            <div id="b">
+                <img src="img/xe14.jpg" style="width: 700px; height: 470px; float: left;" alt="">
+
+            </div>
+            <div id="ophai">
+                <h3 style="font-size: 24px; color: rgb(198, 1, 1);">Giá Bán Lẻ: 344,000,000đ</h3>
+                <p>THÔNG SỐ KỸ THUẬT</p>
+                <P>- Loại động cơ: 4 thì, 4 xy-lanh, DOHC, W/C</P>
+                <p>- Dung tích: 1043 cm3</p>
+                <p>- Hệ thống khởi động : Khởi động điện</p>
+                <p>- Hộp số : Hộp số 6 cấp</p>
+                <p>- Công suất cực đại : 104.5 kW {142 PS} / 10,000 rpm</p>
+                <p>- Mô-men xoắn cực đại : 111.0 Nm {11.3 kg¦m} / 7,300 rpm</p>
+                <p>- Chiều cao yên : 815 mm.</p>
+                <p>- Dung tích bình xăng : 17 Lit</p>
+                <a href="">Thêm vào giỏ hàng</a>
+            </div>
+            <div style="margin-top: 550px;">
+
+                <p style="font-weight: bold; font-size: 24px; color: rgb(44, 34, 20);" align="center">SIÊU NAKEDBIKE
+                    ĐÚNG CHUẨN NGON - BỔ - RẺ</p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 18px; color: rgba(74, 73, 70, 0.988);">
+                    Vẻ ngoài hầm hố đã mang ngôn ngữ thiết kế Sugomi lên một tầm cao mới. Tất cả những chi tiết không
+                    cần thiết đều được lược bỏ để làm nổi bật vẻ đẹp vốn có của chiếc xe. Động cơ 1043cc sản sinh sức
+                    mạnh lớn, trong khi hệ khung gầm chắc chắn mang lại hiệu suất kiểm soát tuyệt vời cho người lái. Sự
+                    kết hợp giữa sức mạnh, hiệu năng và thiết kế đã đem đến sự phấn khích tột độ và không thể cưỡng lại.
+                </p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(100, 99, 97, 0.988);">
+                    Trước năm 2010, phân khúc nakedbike tại Việt Nam là sân chơi của Honda với CB400 Super Four và
+                    CB1000R. Từ năm 2011, Kawasaki Z1000 bắt đầu được chú ý nhờ kiểu dáng hầm hố, góc cạnh đi cùng giá
+                    bán cạnh tranh. Năm 2014, Z1000 bước sang thế hệ mới, sở hữu ngôn ngữ thiết kế Sugomi. Ở thế hệ hiện
+                    tại, Kawasaki Z1000 ABS 2020 đã trở nên mạnh mẽ và nổi bật hơn rất nhiều so với các thế hệ cũ.</p>
+                <p
+                    style="font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: rgba(100, 99, 97, 0.988);">
+                    Chiếc nakedbike của Kawasaki hiện đã và đang là mẫu môtô "quốc dân" tại Việt Nam. Xe đang được phân
+                    phối chính hãng với 2 tùy chọn gồm phiên bản Tiêu chuẩn Z1000 ABS 2020 và phiên bản thể thao Z1000 R
+                    ABS 2020.</p>
+                <img src="" alt="">
+            </div>
+    </div>
+    </section>
+    <footer>
+        <div id="b">
+            <p style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                THÔNG TIN LIÊN HỆ</p>
+            <p>Lầu 20, tòa nhà Havana, số 132 Hàm Nghi, P. Bến Thành, Q.1, TP.HCM.</p>
+            <p>Giờ làm việc: Thứ 2 - 6: 8h00 - 17h00</p>
+            <p>Email: thuannmps34337@fpt.edu.vn</p>
+            <p>Đường dây nóng: 0979362735</p>
+
+        </div>
+        <div style="float: right; margin-right: 400px; line-height: 10px;">
+            <p style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                THEO DÕI CHÚNG TÔI TRÊN</p>
+            <a href="#"><img src="img/ic_yt.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+            </a>
+            <a href="#"><img src="img/ic_insta.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+            </a>
+            <a href="#"><img src="img/ic_fb.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1300px 100px;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                'section section section'
+                'footer footer footer'
+            ;
+            background-color: whitesmoke;
+        }
+
+        header {
+            grid-area: header;
+            height: 100px;
+            background-color: rgb(246, 190, 121);
+        }
+
+        header .tk {
+            float: right;
+            margin-left: 190px;
+            display: flex;
+        }
+
+        header .tk a {
+            font-size: 16px;
+        }
+
+        .tk>.tk-right img {
+            position: absolute;
+            float: left;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        header a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(40, 35, 80);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: brown;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        header img {
+            float: left;
+            width: 190px;
+            height: 90px;
+        }
+
+        nav {
+            grid-area: nav;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.714);
+        }
+
+        nav ul {
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            text-decoration: none;
+            color: rgb(182, 205, 67);
+            font-variant: inherit;
+            font-size: 24px;
+            padding: 0 10px;
+            line-height: 2px;
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(245, 50, 50);
+        }
+
+        section {
+            grid-area: section;
+            height: 550px;
+        }
+
+        #bxt {
+            width: 75%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .otrai {
+            float: left;
+            width: 48%;
+        }
+
+        .ophai {
+            float: right;
+            width: 48%;
+        }
+
+        .login-form {
+            float: left;
+            width: 80%;
+        }
+
+        .register-form {
+            float: right;
+            width: 80%;
+        }
+
+        .login-form,
+        .register-form {
+            padding: 20px;
+            border: 1px solid #d3ced2;
+            margin: 10px 0;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .form-fild,
+        .login-submit,
+        .lost-password,
+        .register-submit {
+            margin-bottom: 10px;
+        }
+
+        .login-submit label {
+            margin-left: 10px;
+        }
+
+        .form-fild p {
+            margin: 0;
+        }
+
+        .form-fild p span.required {
+            color: #f23838;
+        }
+
+        .form-fild input {
+            width: 90%;
+            padding: 0 15px;
+            height: 45px;
+            border: 1px solid #dddddd;
+            color: #333333;
+            border-radius: 5px;
+        }
+
+        .login-submit button,
+        .register-submit button {
+            padding: 10px;
+            background-color: rgb(95, 92, 83);
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+
+        .login-submit button:hover,
+        .register-submit button:hover {
+            color: rgb(255, 250, 250);
+            background-color: rgb(71, 65, 65);
+            transform: scale(1.1);
+        }
+
+        .lost-password>a {
+            color: #a43d21;
+        }
+
+        .lost-password>a:hover {
+            color: #cea679;
+        }
+
+        footer {
+            grid-area: footer;
+            height: 200px;
+            background: rgb(160, 126, 86);
+        }
+
+        footer p {
+            color: rgba(55, 43, 1, 0.89);
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        footer #b {
+            width: 50%;
+            float: left;
+            margin: 5px 40px;
+        }
+
+        footer p {
+            color: rgba(67, 56, 44, 0.89);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40px;
+            font-size: 16px;
+            line-height: 5px;
+        }
+
+        footer a {
+            float: right;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-right: 25px;
+            color: rgb(38, 90, 209);
+            line-height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="media.html" style="float: left;"><img class="logo" src="img/logo1.png" alt="logo"></a>
+            <input
+                style="height: 20px; width: 380px; margin-top: 40px; margin-left: 40px; font-size: 20px; float: left; border-radius: 5px; padding-left: 13px;"
+                type="text" placeholder="Nhập từ khóa tìm kiếm">
+            <img src="img/ic2.png" style="width: 30px; height: 30px; margin-top: 37px; float: left;" alt="">
+            <div style="margin-top: 30px;margin-left: 70px; float: left;">
+                <a href="giohang.html" style="line-height: -12px; float: left; font-weight: bold;"><img
+                        src="img/ic_shoppingcart.png" style="width: 26px; height: 26px;" alt="">
+                    Giỏ Hàng
+                </a>
+            </div>
+            <div class="tk">
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_dauhoi.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Hỗ Trợ
+                </a>
+                <a href="#" style="line-height: -10px; font-size: 16px;"><img src="img/ic_chuongtb.png"
+                        style="width: 16px; height: 16px;" alt="" hspace="5px">
+                    Thông Báo
+                </a>
+                <div class="tk-right">
+                    <a href="b.html">Đăng nhập </a>
+                    <a href=""><img src="img/icons8_user.png" alt=""></a>
+                </div>
+                <a href="a.html" target="a">Đăng ký</a>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Trang chủ </a></li>
+                <li><a href="tintuc.html"> Tin tức </a></li>
+                <li><a href="sanpham.html"> Sản phẩm </a></li>
+                <li><a href="gioithieu.html"> Giới thiệu </a></li>
+                <li><a href="table.html"> Liên hệ </a></li>
+            </ul>
+        </nav>
+        <section>
+            <div align="center">
+                <p style="color: rgb(172, 6, 34); font-size: 17px;"><a href="index.html"
+                        style="font-size: 18px; text-decoration: none;">HOME </a> > Đăng Nhập</p>
+                <hr>
+            </div>
+            <div id="bxt">
+                <div class="otrai">
+                    <div>
+                        <h2>Đăng nhập</h2>
+                    </div>
+                    <div class="login-form">
+                        <form action="#">
+                            <div class="form-fild">
+                                <p><label>Email hoặc số điện thoại<span class="required">*</span></label></p>
+                                <input name="username" value="" type="text">
+                            </div>
+                            <div class="form-fild">
+                                <p><label>Mật khẩu <span class="required">*</span></label></p>
+                                <input name="password" value="" type="password">
+                            </div>
+                            <div class="login-submit">
+                                <button type="submit" class="btn">Đăng nhập</button>
+                                <label>
+                                    <input class="checkbox" name="rememberme" value="" type="checkbox">
+                                    <span>Nhớ tài khoản</span>
+                                </label>
+                            </div>
+                            <div class="lost-password">
+                                <a href="#">Quên mật khẩu?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ophai">
+                    <div style="margin-left: 65px;">
+                        <h2>Đăng ký</h2>
+                    </div>
+                    <div class="register-form">
+                        <form action="#">
+                            <div class="form-fild">
+                                <p><label>Email hoặc số điện thoại<span class="required">*</span></label></p>
+                                <input name="username" value="" type="text">
+                            </div>
+                            <div class="form-fild">
+                                <p><label>Mật khẩu<span class="required">*</span></label></p>
+                                <input name="username" value="" type="text">
+                            </div>
+                            <div class="form-fild">
+                                <p><label>Nhập lại mật khẩu<span class="required">*</span></label></p>
+                                <input name="password" value="" type="password">
+                            </div>
+                            <div class="register-submit">
+                                <button type="submit" class="btn">Đăng ký</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <div id="b">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THÔNG TIN LIÊN HỆ</p>
+                <p>Lầu 20, tòa nhà Havana, số 132 Hàm Nghi, P. Bến Thành, Q.1, TP.HCM.</p>
+                <p>Giờ làm việc: Thứ 2 - 6: 8h00 - 17h00</p>
+                <p>Email: thuannmps34337@fpt.edu.vn</p>
+                <p>Đường dây nóng: 0979362735</p>
+
+            </div>
+            <div style="float: right; margin-right: 400px; line-height: 10px;">
+                <p
+                    style="color: aliceblue; font-family:Arial, Helvetica, sans-serif; margin-left: 40px; font-size: 16px;">
+                    THEO DÕI CHÚNG TÔI TRÊN</p>
+                <a href="#"><img src="img/ic_yt.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_insta.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+                <a href="#"><img src="img/ic_fb.png" style="width: 26px; height: 26px;" alt="" hspace="4px">
+                </a>
+            </div>
+        </footer>
+
+</body>
+
+</html>
