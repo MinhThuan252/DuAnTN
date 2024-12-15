@@ -12,3 +12,12 @@ Route::get('/sptl/{id}', [HomeController::class, 'sp_trongloai','danhmuc'])->nam
 Route::get('/chitietsp/{id}', [HomeController::class, 'chitiet_sp'])->name('spct');
 Route::get('/giohang', [HomeController::class, 'giohang']);
 Route::get('/thanhtoan', [HomeController::class, 'thanhtoan']);
+
+use App\Http\Controllers\UserController;
+Route::get('/dangnhap',[UserController::class,'dangnhap'])->name('login');
+Route::post('/dangnhap', [UserController::class,'dangnhap_']);
+Route::get('/thoat', [UserController::class,'thoat']);
+Route::get('/download', [SanPhamController::class,'download'])->middleware('auth');
+Route::get('/dangky', [UserController::class,'dangky']);
+Route::post('/dangky', [UserController::class,'dangky_']);
+Route::get('/camon', [UserController::class,'camon']);
